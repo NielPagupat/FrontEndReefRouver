@@ -18,7 +18,7 @@ const Landing = lazy(delayImport(() => import('./Pages/landing.jsx'), 2000));
 const Login = lazy(delayImport(() => import('./Pages/login.jsx'), 2000));
 const PassRecovery = lazy(delayImport(() => import('./Pages/passrecovery.jsx')));
 const Signup = lazy(delayImport(() => import('./Pages/signup.jsx')));
-
+const Dashboard = lazy(delayImport(()=>import('./Pages/dashboard.jsx')));
 
 const router = createBrowserRouter([
   {path: "/", element: <Landing />,
@@ -31,6 +31,7 @@ const router = createBrowserRouter([
   {path: "/Login", element: <Login/>},
   {path: "/SignUp", element: <Signup/>},
   {path: "/Recovery", element: <PassRecovery/>},
+  {path: "/Dashboard", element: <Dashboard/>},
 ]);
 
 createRoot(document.getElementById('root')).render(
