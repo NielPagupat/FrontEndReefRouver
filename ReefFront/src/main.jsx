@@ -32,6 +32,7 @@ const router = createBrowserRouter([
   {path: "/SignUp", element: <Signup/>},
   {path: "/Recovery", element: <PassRecovery/>},
   {path: "/Dashboard", element: <Dashboard/>},
+  {path: "/loading", element: <Loading/>},
 ]);
 
 createRoot(document.getElementById('root')).render(
