@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className=''>
       Reef Rouver Front End
       </div>
     </>

@@ -6,8 +6,8 @@ export default function Landing() {
   
 
   return (
-    <div>
-        Working
+    <div className=''>
+        
     </div>
   )
 }
