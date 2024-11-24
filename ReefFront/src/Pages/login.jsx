@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import LandingNavigation from '../Components/LandingNavigation'
 import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { setToken, setEmail } from '../slice'
 
+import axios from 'axios'
+import API from '../helper/API'
 export default function Login() {
 
   const navigate = useNavigate()
+  const {email, token} = useSelector((state) => state.auth_token)
 
   const [credentials, setCredentials] = useState({
-    "username": "",
+    "email": "",
     "password": ""
   })
 
@@ -18,9 +23,29 @@ export default function Login() {
     }))
   }
 
-  const submitCredentials = () => {
-    console.log(credentials)
-  }
+  const dispatch = useDispatch()
+
+  const submitCredentials = async () => {
+    
+
+    try {
+      console.log(credentials);
+      const response = await axios.post(API('auth/token/login'), credentials, {
+        headers: {
+          'Content-Type': 'application/JSON',
+          'Referrer-Policy': 'same-origin',
+          'Cross-Origin-Opener-Policy': 'same-origin'
+        }
+      });
+      // Dispatch actions after successful response
+      dispatch(setToken(response.data.auth_token));
+      dispatch(setEmail(credentials.email));
+      navigate('/Dashboard');
+    } catch (error) {
+      console.error(error); // Log the error if there's any
+      alert("Username and password: Mismatch or is blank");
+    }
+  };
 
   const goToRegister = () => {
     navigate('/SignUp')
@@ -38,8 +63,8 @@ export default function Login() {
               <div className='flex flex-1 justify-center'>
               <h1 className='text-white text-3xl mb-5 font-bold'>Login</h1>
             </div>
-            <h1 className='text-white font-semibold m-1'>username:</h1>
-            <input onChange={(e) => handleCredentials("username", e.target.value)} type='text'className='text-white border border-black rounded-md p-1 pl-2 bg-inherit' placeholder='your@gmail.com'/>
+            <h1 className='text-white font-semibold m-1'>email:</h1>
+            <input onChange={(e) => handleCredentials("email", e.target.value)} type='text'className='text-white border border-black rounded-md p-1 pl-2 bg-inherit' placeholder='your@gmail.com'/>
             <h1 className='text-white font-semibold m-1'>Password</h1>
             <input onChange={(e) => handleCredentials("password", e.target.value)} type="password" className='text-white border border-black rounded-md p-1 pl-2 bg-inherit'/>
             <div className='flex flex-1 justify-end'>

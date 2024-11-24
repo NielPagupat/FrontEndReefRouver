@@ -22,6 +22,7 @@ const Login = lazy(delayImport(() => import('./Pages/login.jsx'), 2000));
 const PassRecovery = lazy(delayImport(() => import('./Pages/passrecovery.jsx')));
 const Signup = lazy(delayImport(() => import('./Pages/signup.jsx')));
 const Dashboard = lazy(delayImport(()=>import('./Pages/dashboard.jsx')));
+const ActivateAcc = lazy(delayImport(()=>import('./Pages/activation.jsx')));
 
 const router = createBrowserRouter([
   {path: "/", element: <Landing />,
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
       {path: "Rent", element: <RentRouv />},
     ],
   },
+  {path: "/Activate", element: <ActivateAcc />},
+  {path: "/RecoverPass", element: <PassRecovery />},
 ]);
 
 createRoot(document.getElementById('root')).render(
