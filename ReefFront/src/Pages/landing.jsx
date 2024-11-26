@@ -5,18 +5,17 @@ import LandingNavigation from '../Components/LandingNavigation'
 export default function Landing() {
 
   return (
-    <div className='flex fontsans  flex-col'
-        >
+    <div className='flex fontsans  flex-col'>
         <LandingNavigation/>
         <main className='flex flex-1 flex-col bg-[#006994] items-center text-center '  style={{
-          backgroundImage: "url('../src/assets/coralwithfish.png')", 
+          backgroundImage: "url('../src/assets/coralwithfish.jpg')", 
           backgroundAttachment: 'fixed', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
         }}>
 
-            <div className="flex p-0 m-0 h-screen flex-col items-center bg-center" >
-              <div className="flex text-2xl flex-col rounded justify-center mt-20  bg-black/50 backdrop-blur-sm font-light mb-20 w-6/12 p-5 border-10  text-white ">
+            <div className="flex p-0 m-0 h-full flex-col items-center bg-center" >
+              <div className="flex text-2xl flex-col rounded-lg justify-center my-32 bg-black/50 backdrop-blur-sm font-light w-1/2 p-12 border-10  text-white ">
                 <p>
                   <p className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Coral reef are some of the most diverse ecosystem in the world.</p>
                   Coral polyps, the animals primarily responsible for building reefs, can take many forms: large reef-building colonies, graceful flowing fans, and even small,
@@ -35,13 +34,13 @@ export default function Landing() {
             </div>
 
                 {/** coral bleaching */}
-                <div className='flex flex-1 w-4/5 mb-2 mt-5 bg-white'>
-                  <img src="../src/assets/CoralB.jpg" alt="bleachInfo" />
+                <div className='rounded-lg flex flex-1 w-4/5 my-32 bg-white'>
+                  <img className='rounded-lg' src="../src/assets/CoralB.jpg" alt="bleachInfo" />
                 </div>
 
                 {/** biodivercity */}
-                <div className="flex justify-center flex-1 items-center h-screen">
-                  <div className="w-6/12 p-8 rounded bg-white bg-opacity-80 text-center border-2  border-gray-300">
+                <div className="flex justify-center flex-1 items-center h-screen mb-64">
+                  <div className="w-6/12 p-8 rounded-lg bg-white bg-opacity-80 text-center border-2  border-gray-300">
                     <p className="text-lg font-serif">
                       Biodiversity refers to the variety of living species that can be found in a particular place. Coral reefs are believed by many to have the highest biodiversity of any ecosystem on the planet—even more than a tropical rainforest. Occupying less than one percent of the ocean floor, coral reefs are home to more than 25% of all marine life.
                       <br />
@@ -74,7 +73,8 @@ export default function Landing() {
                     alt="sub1" 
                     style={{
                       width: '30%',              
-                      height: '30%',             
+                      height: '30%',
+                      borderRadius: 10,             
                     }} 
                   />
                   <img 
@@ -83,6 +83,7 @@ export default function Landing() {
                     style={{
                       width: '30%',
                       height: '30%',
+                      borderRadius: 10,
                     }} 
                   />
                   <img 
@@ -91,12 +92,13 @@ export default function Landing() {
                     style={{
                       width: '30%',
                       height: '30%',
+                      borderRadius: 10,
                     }} 
                   />
               </div>
 
-                <div className='bg-cyan-600 w-full mb-10 h-96'>
-                  <div className='flex w-full font-bold text-5xl pl-20 mb-20'>
+                <div className='bg-cyan-600/70 w-full p-6 h-96 m-10'>
+                  <div className='flex w-full font-bold text-5xl m-5'>
                     <h2 className=' text-white'>
                       Reef Rouver Uses
                     </h2>
@@ -105,36 +107,35 @@ export default function Landing() {
                     {/** materials */}
                 <div className='flex flex-row justify-around  text-white w-full min-h-16'>
                   <div className='flex justify-center flex-col flex-1 items-center'>
-                      <img className='rounded-full w-6/12 mb-5'
+                      <img className='rounded-xl w-6/12 mb-5'
                       src="../src/assets/AUno.png" alt="Aunp" />
                       <p>Arduino Uno</p>
                     </div>
 
                     <div className='flex justify-center flex-col flex-1 items-center'>
-                      <img className='rounded-full w-6/12 mb-5'
+                      <img className='rounded-xl w-6/12 mb-5'
                         src="../src/assets/MotorD.png" alt="MotorD" />
                       <p>L298 Motor Driver Boards</p>
                     </div>
 
                     <div className='flex justify-center flex-col flex-1 items-center'>
-                      <img className='rounded-full w-6/12 mb-5'
+                      <img className='rounded-xl w-6/12 mb-5'
                         src="../src/assets/Eshield.png" alt="mat" />
                       <p>Ethernet Shield</p>
                     </div>
 
                     <div className='flex justify-center flex-col flex-1 items-center'>
-                    <img className='rounded-full w-6/12 h-auto mb-5'
+                    <img className='rounded-xl w-6/12 h-auto mb-5'
                       src="../src/assets/relay.png" alt="relay" />
                       <p>Arduino Relay Channel</p>
                     </div>
-
                 </div>
               </div>
               
 
-              <div className='flex justify-center flex-col mb-20 items-center font-extrabold p-10 w-auto h-auto text-3xl text-white bg-black/50 backdrop-blur-sm'>
+              <div className='rounded-lg flex justify-center flex-col p-10 mb-20 items-center font-extrabold w-auto h-auto text-3xl text-white bg-black/50 backdrop-blur-sm'>
                 <div>
-                    <h1 className='mb-2' >
+                    <h1 className='mb-10' >
                       And Using
                     </h1>
                     <div className='flex justify-center items-center'>
@@ -144,7 +145,7 @@ export default function Landing() {
               </div>
 
               <div className='flex justify-center items-center w-6/12 mb-2 p-10 rounded '>
-                    <p className='bg-black/50 backdrop-blur-sm break-words text-white'> 
+                    <p className='bg-black/50 backdrop-blur-sm break-words text-white p-5 rounded-lg'> 
                       The Prototype of Reef Rouver Was tried and Tested last November 17, 2024 where we got Valuable data for further AI training and How to improve the Submersible over all.
                     </p>
               </div>
@@ -166,39 +167,35 @@ export default function Landing() {
                 </div>
               </div>
 
-              <div className='bg-black/50 backdrop-blur-sm mb-20'>
-                    <h1 className='text-3xl text-white font-extrabold'>
+              <div className='bg-black/50 backdrop-blur-sm mb-20 p-4 rounded-lg'>
+                    <h1 className='text-3xl text-white font-extrabold pb-4'>
                         Our Team
                     </h1>
-                    <div className='flex flex-row justify-around  text-white w-full min-h-16'>
+                    <div className='flex flex-row text-white'>
                         <div className='flex justify-center flex-col flex-1 items-center'>
-                            <img className='rounded-full w-6/12 mb-5'
+                            <img className='rounded-full w-3/4 mb-5'
                             src="../src/assets/Cj.png" alt="Aunp" />
-                            <p>Creslen Joy B. Boncales</p>
                           </div>
 
                           <div className='flex justify-center flex-col flex-1 items-center'>
-                            <img className='rounded-full w-6/12 mb-5'
+                            <img className='rounded-full w-3/4 mb-5'
                               src="../src/assets/Rimand.png" alt="MotorD" />
-                            <p>Ricado M. Rimando Jr.</p>
                           </div>
 
                           <div className='flex justify-center flex-col flex-1 items-center'>
-                            <img className='rounded-full w-6/12 mb-5'
+                            <img className='rounded-full w-3/4 mb-5'
                               src="../src/assets/Niel.png" alt="mat" />
-                            <p> Niel Angelo Pagupat</p>
                           </div>
 
                           <div className='flex justify-center flex-col flex-1 items-center'>
-                          <img className='rounded-full w-6/12 h-auto mb-5'
+                          <img className='rounded-full w-3/4 mb-5'
                             src="../src/assets/Lance.png" alt="relay" />
-                            <p> Lance Stuart Cambarijan</p>
                           </div>
 
                           <div className='flex justify-center flex-col flex-1 items-center'>
-                          <img className='rounded-full w-6/12 h-auto mb-5'
+                          <img className='rounded-full w-3/4 mb-5'
                             src="../src/assets/Rome.png" alt="relay" />
-                            <p> Gerome Quilestino</p>
+
                           </div>
                       </div>
                     </div>
@@ -206,12 +203,12 @@ export default function Landing() {
 
         
 
-        <footer className=' bg-slate-800 w-full h-1/4 text-white'>
+        <footer className=' bg-slate-800 w-full h-1/4 text-white p-10'>
         <div className="container mx-auto text-center">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <p className="mt-2">Email: reefrover@gmail.com</p>
-          <p>Phone: 63+ 987654321</p>
-          <p className="mt-4">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+          <p className="mt-2">Email: reefrouver@gwapo.com</p>
+          <p>Phone: 09360691337</p>
+          <p className="mt-4">&copy; {new Date().getFullYear()} Pachuychuy. All rights reserved.</p>
         </div>
         </footer>
       </div>
