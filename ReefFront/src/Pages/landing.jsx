@@ -209,7 +209,7 @@ export default function Landing() {
         <footer className=' bg-slate-800 w-full h-1/4 text-white'>
         <div className="container mx-auto text-center">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <p className="mt-2">Email: reefrover.com</p>
+          <p className="mt-2">Email: reefrover@gmail.com</p>
           <p>Phone: 63+ 987654321</p>
           <p className="mt-4">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
         </div>
