@@ -1,8 +1,10 @@
 import React from 'react';
 import LandingNavigation from '../Components/LandingNavigation';
 import { Outlet, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Dashboard() {
+  const {email, token} = useSelector((state) => state.auth_token)
   return (
     <div className='flex flex-col h-screen'>
       <LandingNavigation />
