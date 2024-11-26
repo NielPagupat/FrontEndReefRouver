@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const TokenSlice = createSlice({
   name: 'auth_token',
   initialState: {
-    email: "placeholder@gmail.com",
-    token: "xxxxxx-xxxxx-xxxxx",
+    email: "",
+    token: "",
   },
   reducers: {
     setToken: (state, action) => {
